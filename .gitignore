@@ -1,0 +1,7 @@
+/02-streams-sql/node_modules
+/02-streams-sql/data/*
+/01-json-reader/data.ndjson
+/01-json-reader/node_modules
+/01-json-reader/output.ndjson
+/improving-nodejs-capacity/simple-api/node_modules
+/improving-nodejs-capacity/cluster-api/node_modules
