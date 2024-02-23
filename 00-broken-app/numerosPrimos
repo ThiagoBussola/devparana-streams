@@ -1,0 +1,38 @@
+//https://www.modernjs.com/asynchronous.html
+
+function primeNumbersTo(max) {
+    var store = [], i, j;
+    for (let i = 2; i <= max; ++i) {
+        if (!store[i]) {
+            escreverArquivo('primos.txt', i)
+            for (let j = i << 1; j <= max; j += i) {
+                store[j] = true;
+            }
+        }
+    }
+    console.log("Primes from max %s: %s", max, primes);
+    return;
+}
+
+// Start timer
+console.time();
+console.log("About to get primes");
+console.log("Getting primes up to 10");
+primeNumbersTo(10);
+console.log("Getting primes up to 10_000");
+primeNumbersTo(10_000);
+console.log("Getting primes up to 10_000_000");
+primeNumbersTo(10_000_000);
+console.log("Finished getting primes");
+console.log("Getting primes up to 100_000_000");
+primeNumbersTo(100_000_000);
+console.log("Finished getting primes");
+
+//memory leak
+// console.log("Getting primes up to 10_000_000_000");
+// primeNumbersTo(10_000_000_000);
+// console.log("Finished getting primes");
+
+console.log("I'm a really urgent log message, I had to wait...");
+// End timer 
+console.timeEnd();
